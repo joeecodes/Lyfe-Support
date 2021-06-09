@@ -49,7 +49,7 @@ class Support(commands.Cog):
     @commands.command()
     @commands.cooldown(1, 3600, commands.BucketType.user)
     async def report(self, ctx, *, message):
-        embed = discord.Embed(title=f'Report has been sent', description="Thank you for reporting!", color=discord.Color.red())
+        embed = discord.Embed(title=f'Report has been sent', description="Thank you for reporting!", color=discord.Color.green())
         channel = self.bot.get_channel(851175334552273000)
         await channel.send(f"**{ctx.author}** reported: `{message}`")
         await ctx.send(embed=embed)
